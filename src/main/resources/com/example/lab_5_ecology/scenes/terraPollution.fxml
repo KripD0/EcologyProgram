@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="479.0" prefWidth="627.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab_5_ecology.controllers.TerraController">
+    <children>
+        <Button layoutX="70.0" layoutY="411.0" mnemonicParsing="false" onAction="#onCalculateButtonClick" prefHeight="36.0" prefWidth="187.0" text="Рассчитать">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <Button layoutX="414.0" layoutY="404.0" mnemonicParsing="false" onAction="#onClearButtonClick" prefHeight="36.0" prefWidth="187.0" text="Очистить поля">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <TextField fx:id="squareField" layoutX="236.0" layoutY="55.0" prefHeight="21.0" prefWidth="118.0" promptText="Введите значение" />
+        <TextField fx:id="soilDepthField" layoutX="236.0" layoutY="86.0" prefHeight="25.0" prefWidth="118.0" promptText="Введите значение" />
+        <TextField fx:id="periodOfTimeField" layoutX="237.0" layoutY="154.0" prefHeight="25.0" prefWidth="118.0" promptText="Введите значение" />
+        <Label layoutX="111.0" layoutY="34.0" text="Входные параметры">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="12.0" layoutY="63.0" prefHeight="18.0" prefWidth="63.0" text="Площадь">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="12.0" layoutY="87.0" prefHeight="27.0" prefWidth="72.0" text="Глубина почвы">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="12.0" layoutY="158.0" prefHeight="18.0" prefWidth="126.0" text="Период времени, в годах">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="12.0" layoutY="118.0" prefHeight="18.0" prefWidth="130.0" text="Плотность">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="densityCombobox" layoutX="236.0" layoutY="116.0" prefHeight="25.0" prefWidth="118.0" promptText="Выберите ">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </ComboBox>
+        <Line endX="268.0" endY="20.000030517578125" layoutX="105.0" layoutY="12.0" startX="-97.0" startY="20.000030517578125" />
+        <Line endX="-101.2928466796875" endY="320.5" layoutX="475.0" layoutY="72.0" startX="-101.5" startY="-39.499969482421875" />
+        <Line endX="273.0" endY="-19.959564208984375" layoutX="100.0" layoutY="209.0" startX="-92.5" startY="-21.20709228515625" />
+        <Line endX="-93.0" endY="381.0" layoutX="100.0" layoutY="11.0" startX="-93.0" startY="21.0" />
+        <ImageView fx:id="imageBack" fitHeight="36.0" fitWidth="39.0" layoutX="-4.0" layoutY="-4.0" onMouseClicked="#clickOnImageBack" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/Back.png" />
+            </image>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </ImageView>
+      <Line endX="256.2071533203125" endY="69.0" layoutX="117.0" layoutY="76.0" startX="-109.5" startY="69.0" />
+      <Label layoutX="432.0" layoutY="29.0" text="Выходные параметры">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Line endX="281.5" endY="12.0" layoutX="331.0" layoutY="20.0" startX="71.5" startY="12.0" />
+      <Line endX="7.0" endY="372.0" layoutX="395.0" layoutY="20.0" startX="7.0" startY="12.5" />
+      <Line endX="208.0" endY="361.0" layoutX="405.0" layoutY="30.0" startX="208.0" startY="2.5" />
+      <Line endX="276.5" endY="295.5" layoutX="336.0" layoutY="96.0" startX="66.5" startY="296.5" />
+      <Label layoutX="404.0" layoutY="56.0" text="Масса эродированного грунта: " />
+      <TextField fx:id="massOfErodedSoilField" alignment="CENTER" editable="false" layoutX="402.0" layoutY="78.0" prefHeight="25.0" prefWidth="211.0" />
+      <Label layoutX="404.0" layoutY="155.0" text="Скорость эрозии:" />
+      <TextField fx:id="erosionRateField" alignment="CENTER" editable="false" layoutX="402.0" layoutY="181.0" prefHeight="25.0" prefWidth="211.0" />
+      <Label layoutX="12.0" layoutY="196.0" prefHeight="18.0" prefWidth="126.0" text="Коэффицент остатков, в %">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="233.0" prefHeight="18.0" prefWidth="103.0" text="Длина склона">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="265.0" prefHeight="18.0" prefWidth="103.0" text="Крутизна склона">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="297.0" prefHeight="18.0" prefWidth="227.0" text="Коэффицент управления растениеводством, в %">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="333.0" prefHeight="18.0" prefWidth="200.0" text="Коэффицент практики поддержки, в %">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Line endX="263.2071533203125" endY="103.5" layoutX="110.0" layoutY="289.0" startX="-102.5" startY="103.5" />
+      <ComboBox fx:id="erosionSusceptibilityFactorCombobox" layoutX="237.0" layoutY="361.0" prefHeight="25.0" prefWidth="118.0" promptText="Выберите ">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
+      <Label layoutX="12.0" layoutY="365.0" prefHeight="18.0" prefWidth="200.0" text="Коэффицент подвеженности эрозии, в %">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <TextField fx:id="supportPracticeRatiosField" layoutX="237.0" layoutY="325.0" prefHeight="25.0" prefWidth="118.0" promptText="Введите значение" />
+      <TextField fx:id="cropManagementCoefficientField" layoutX="237.0" layoutY="293.0" prefHeight="25.0" prefWidth="118.0" promptText="Введите значение" />
+      <TextField fx:id="slopeSteepnessField" layoutX="237.0" layoutY="260.0" prefHeight="25.0" prefWidth="118.0" promptText="Введите значение" />
+      <TextField fx:id="slopeLengthField" layoutX="237.0" layoutY="228.0" prefHeight="21.0" prefWidth="118.0" promptText="Введите значение" />
+      <TextField fx:id="residueRatioField" layoutX="237.0" layoutY="196.0" prefHeight="25.0" prefWidth="118.0" promptText="Введите значение" />
+      <Label layoutX="404.0" layoutY="268.0" text="Среднегодовые потери:" />
+      <TextField fx:id="averageAnnualLossesField" alignment="CENTER" editable="false" layoutX="402.0" layoutY="288.0" prefHeight="25.0" prefWidth="211.0" />
+    </children>
+</AnchorPane>

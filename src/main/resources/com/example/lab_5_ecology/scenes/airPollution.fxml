@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="479.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab_5_ecology.controllers.AirController">
+   <children>
+      <Button layoutX="415.0" layoutY="400.0" mnemonicParsing="false" onAction="#onCalculateButtonClick" prefHeight="36.0" prefWidth="187.0" text="Рассчитать">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="11.0" layoutY="401.0" mnemonicParsing="false" onAction="#onClearButtonClick" prefHeight="36.0" prefWidth="187.0" text="Очистить поля">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="Passenger" layoutX="236.0" layoutY="57.0" prefHeight="21.0" prefWidth="118.0" promptText="Введите кол-во" />
+      <TextField fx:id="Van" layoutX="236.0" layoutY="90.0" prefHeight="25.0" prefWidth="118.0" promptText="Введите кол-во" />
+      <TextField fx:id="Freight_upper" layoutX="237.0" layoutY="154.0" prefHeight="25.0" prefWidth="118.0" promptText="Введите кол-во" />
+      <TextField fx:id="Bus" layoutX="237.0" layoutY="186.0" prefHeight="25.0" prefWidth="118.0" promptText="Введите кол-во" />
+      <TextField fx:id="Freight_under" layoutX="236.0" layoutY="122.0" prefHeight="25.0" prefWidth="118.0" promptText="Введите кол-во" />
+      <Label layoutX="13.0" layoutY="34.0" text="Виды автотранспорта">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="68.0" prefHeight="18.0" prefWidth="63.0" text="Легковой">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="96.0" prefHeight="27.0" prefWidth="191.0" text="Автофургоны и микроавтобусы до 3.5 т">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="134.0" prefHeight="18.0" prefWidth="95.0" text="Грузовые 3.5 - 12т">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="166.0" prefHeight="18.0" prefWidth="102.0" text="Грузовые свыше 12т">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="196.0" prefHeight="18.0" prefWidth="102.0" text="Автобусы свыше 3.5 т">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <TextField fx:id="Distanse" layoutX="235.0" layoutY="255.0" prefHeight="25.0" prefWidth="118.0" promptText="Введите кол-во" />
+      <Label layoutX="23.0" layoutY="263.0" prefHeight="18.0" prefWidth="130.0" text="Длина участка дороги (Км)">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="309.0" prefHeight="18.0" prefWidth="130.0" text="Скорость">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="Speed_combobox" layoutX="234.0" layoutY="303.0" prefHeight="0.0" prefWidth="125.0" promptText="Выберите ">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
+      <Label layoutX="387.0" layoutY="35.0" prefHeight="18.0" prefWidth="191.0" text="Выброс загрязняющего вещества" />
+      <Line endX="265.2071533203125" endY="20.207122802734375" layoutX="110.0" layoutY="12.0" startX="-99.58575439453125" startY="20.207122802734375" />
+      <Line endX="-100.29287719726562" endY="186.3333282470703" layoutX="476.0" layoutY="30.0" startX="-100.2928466796875" startY="2.707122802734375" />
+      <Line endX="265.0" endY="1.0" layoutX="110.0" layoutY="216.0" startX="-100.0" />
+      <Line endX="-90.70709228515625" endY="205.5" layoutX="100.0" layoutY="9.0" startX="-90.70709228515625" startY="23.0" />
+      <Label layoutX="428.0" layoutY="74.0" prefHeight="18.0" prefWidth="63.0" text="CO =">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <TextField fx:id="CO" editable="false" layoutX="470.0" layoutY="64.0" prefHeight="21.0" prefWidth="118.0" />
+      <TextField fx:id="NO" editable="false" layoutX="470.0" layoutY="110.0" prefHeight="25.0" prefWidth="118.0" />
+      <TextField fx:id="CH" editable="false" layoutX="470.0" layoutY="156.0" prefHeight="25.0" prefWidth="118.0" />
+      <TextField fx:id="Soot" editable="false" layoutX="470.0" layoutY="202.0" prefHeight="25.0" prefWidth="118.0" />
+      <TextField fx:id="SO" editable="false" layoutX="470.0" layoutY="248.0" prefHeight="25.0" prefWidth="118.0" />
+      <TextField fx:id="Formaldehyde" editable="false" layoutX="470.0" layoutY="292.0" prefHeight="25.0" prefWidth="118.0" />
+      <TextField fx:id="Benzopyrene" editable="false" layoutX="470.0" layoutY="338.0" prefHeight="25.0" prefWidth="118.0" />
+      <Label layoutX="429.0" layoutY="121.0" prefHeight="18.0" prefWidth="63.0" text="NO =">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="429.0" layoutY="161.0" prefHeight="18.0" prefWidth="63.0" text="CH =">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="429.0" layoutY="208.0" prefHeight="18.0" prefWidth="63.0" text="Сажа =">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="429.0" layoutY="254.0" prefHeight="18.0" prefWidth="63.0" text="SO =">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="384.0" layoutY="300.0" prefHeight="18.0" prefWidth="83.0" text="Формальдегид =">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="399.0" layoutY="346.0" prefHeight="18.0" prefWidth="84.0" text="Бензопирен =">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageBack" fitHeight="36.0" fitWidth="39.0" layoutX="-4.0" layoutY="-4.0" onMouseClicked="#clickOnImageBack" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Back.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

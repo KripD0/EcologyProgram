@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab_5_ecology.controllers.MenuController">
+   <children>
+      <ImageView fitHeight="417.0" fitWidth="650.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Bot_sad.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="180.0" layoutY="14.0" text="Экомониторинг">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelToAir" layoutY="86.0" onMouseClicked="#switchToAir" text="1.Перейти на форму по расчету загрязнения воздуха." textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label fx:id="labelToTerra" layoutY="147.0" onMouseClicked="#switchToTerra" text="2.Перейти на форму по расчету эрозии почвы." textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+   </children>
+</AnchorPane>
